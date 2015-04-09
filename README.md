@@ -1,14 +1,11 @@
+# flexible.min.js
+这段代码是从淘宝手机抓取的，做了一定修改
+
+flexible.js是源码(和min不一样)
+
 #lib.flexible
 
 移动端自适应方案
-
-## 最新版本
-
-**1.0rc1**
-
-## 依赖库
-
-无
 
 ## 使用方法
 
@@ -84,60 +81,3 @@
 **lib.flexible.refreshRem()** 
 
 刷新当前页面的rem基准值
-
-## 栅格系统
-
-***需引入makegrid.js***
-
-### 使用方法
-
-    lib.flexible.makeGrid(params)
-
-- [Object params]
-    - designWidth - 设计稿宽度
-    - designUnit - 设计稿最小单位a（以px为单位）
-    - columnCount - 栅格列数
-    - columnXUnit - 栅格列宽（以a为单位）
-    - gutterXUnit - 栅格间距（以a为单位）
-    - edgeXUnit - 页面左右边距（以a为单位）
-    - className - 栅格样式的名称（可省略，默认为grid）
-
-通过传入视觉的栅格规范定义，可以输出对应的css样式。
-
-    lib.flexible.makeGridMode(modeName)
-
-- [String modeName]
-
-方案还预置了几个默认的栅格规范，分别是`750-12`，`750-6`，`640-12`，`640-6`。
-
-### 利用meta输出栅格样式
-
-    <meta content="designWidth=750, desginUnit=6, columnCount=12, columnXUnit=7, gutterXUnit=3, edgeXUnit=4" name="grid" />
-
-或
-
-    <meta content="modeName=750-12" name="grid" />
-
-### 栅格代码举例
-
-    <div class="grid">
-        <div class="col-4"></div>
-        <div class="col-4"></div>
-        <div class="col-4"></div>
-    </div>
-
-    <div class="grid">
-        <div class="col-6"></div>
-        <div class="col-6"></div>
-    </div>
-
-    <div class="grid">
-        <div class="col-3"></div>
-        <div class="col-4"></div>
-        <div class="col-5"></div>
-    </div>
-
-
-### 四类栅格在不同手机上的表现
-
-![栅格](grid.jpg);

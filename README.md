@@ -3,6 +3,24 @@
 
 flexible.js是源码(和min不一样)
 
+# sass
+
+比方说设计稿 640 x 1136
+
+    ```css
+        $baseFontSize:        64px * 0.625
+
+        // pixels to rems
+        @function pxToRem($px)
+            @return $px / $baseFontSize * 1rem
+
+        // responsive font-size
+        @mixin fontSize($fontSize)
+            &
+                font-size: #{$fontSize}px
+            [data-dpr="3"] &
+                font-size: #{$fontSize * 1.656}px
+    ```
 #lib.flexible
 
 移动端自适应方案
